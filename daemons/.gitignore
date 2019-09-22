@@ -1,0 +1,11 @@
+*.swp
+*~
+
+# Binaries
+authority/nonvoting/nonvoting
+mailproxy/mailproxy
+server/server
+
+# Non-external dependencies.
+vendor/github.com/katzenpost
+no_vendor
