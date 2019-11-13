@@ -13,8 +13,8 @@ go install $katz_dir/catshadow/cmd
 # Since go's install command has no such functionality we use
 # 'go build' and then move the binary to the correct folder
 go build -o spool_server_tmp $katz_dir/memspool/server
-mv $katz_dir/spool_server_tmp $GOPATH/bin/spool_server
+mv spool_server_tmp $GOPATH/bin/spool_server
 
 go build -o panda_tmp $katz_dir/panda/server
-mv $katz_dir/panda_tmp $GOPATH/bin/panda
+mv panda_tmp $GOPATH/bin/panda
 
