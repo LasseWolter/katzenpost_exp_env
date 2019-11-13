@@ -7,6 +7,8 @@ This repo is given as is and won't be updated to work with the most recent versi
 If you would like to work with the most recent version of the katzenpost mixnet, checkout their repo -> [katzenpost](https://github.com/katzenpost)
 
 ## Setup
+Make sure your `$GOPATH` environment variable is set to the root of your go workspace (by default this is `~/go`).
+You can check this by running `echo $GOPATH`.
 1.  Clone this repo into `$GOPATH/src/github.com/katzenpost` using the following commads
 	- `cd $GOPATH/src/github.com/` 
 		- this directory should exists if you've used any go libraries hosted on git, if it doesn't exist, create it
