@@ -2,6 +2,7 @@
 echo "Unpack dependencies..."
 cat dep/part_dep.* > dep.zip
 unzip dep.zip -d $GOPATH/src
+rm dep.zip
 
 echo "Installing go binaries..."
 # Fixing path means that the path in the different config files is changed to match
