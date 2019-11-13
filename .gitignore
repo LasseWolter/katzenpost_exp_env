@@ -1,3 +1,4 @@
 *.db
 *.pem
 mixnet/queue_outputs/
+log
