@@ -11,8 +11,8 @@ If you would like to work with the most recent version of the katzenpost mixnet,
 	- `cd $GOPATH/src/github.com/` 
 		- this directory should exists if you've used any go libraries hosted on git, if it doesn't exist, create it
 	- `git clone https://github.com/LasseWolter/katzenpost_exp_env.git katzenpost`
-2. Finish setup by running:
-	- `./install/make.sh` (a bash script included in the repository)
+2. Finish setup by entering the `install` directory (`cd install`) and running:
+	- `./make.sh` (a bash script included in the repository)
 	- this will install:
 		- required dependencies in your go source folder `$GOPATH/src`
 		- the go binaries required for the mixnet in `$GOPATH/bin`
