@@ -14,7 +14,7 @@
   Addresses = ["127.0.0.1:29001"]
 
   # DataDir is the absolute path to the server's state files.
-  DataDir = "/home/lasse/Programming/mix_net/mix1"
+  DataDir = "/home/lasse/go/src/github.com/katzenpost/mixnet/mix1"
 
   # IsProvider specifies if the server is a provider (vs a mix).
   IsProvider = false 
@@ -46,7 +46,7 @@
   Disable = false
 
   # File specifies the log file, if omitted stdout will be used.
-  File = "/home/lasse/Programming/mix_net/log/mix1.log"
+  File = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/mix1.log"
 
   # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
   # `INFO` and `DEBUG`.

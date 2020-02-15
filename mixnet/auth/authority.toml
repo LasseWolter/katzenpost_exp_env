@@ -9,7 +9,7 @@
   Addresses = ["127.0.0.1:2323" ]
 
   # DataDir is the absolute path to the server's state files.
-  DataDir = "/home/lasse/Programming/mix_net/auth"
+  DataDir = "/home/lasse/go/src/github.com/katzenpost/mixnet/auth"
 
 #
 # The Logging section controls the logging.
@@ -21,7 +21,7 @@
   Disable = false
 
   # File specifies the log file, if omitted stdout will be used.
-  File = "/home/lasse/Programming/mix_net/log/authority.log"
+  File = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/authority.log"
 
   # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
   # `INFO` and `DEBUG`.
@@ -103,10 +103,10 @@
   # format.
   IdentityKey = "tcsASvX7qj9n9i32nftWZwa+5OM/+cS7G6qZT80N9nc="
 
-#[[Mixes]] # Mix2
+[[Mixes]] # Mix2
 #  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
 #  # format.
-#  IdentityKey = "dezYM6FM1LzarrUibstoE3JHcOyFygXgfkX7FiBjBvo="
+  IdentityKey = "riZSpIh7Xr+n+AOmMm/tlWX4+C62O7ozKwNioltjtdA="
 #
 #[[Mixes]] # Mix3
 #  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64

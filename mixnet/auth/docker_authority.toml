@@ -1,0 +1,160 @@
+#
+# The Authority section contains mandatory information.
+#
+
+[Authority]
+
+  # Addresses are the IP address/port combinations that the authority will bind
+  # to for incoming connections.
+  Addresses = ["127.0.0.1:2323" ]
+
+  # DataDir is the absolute path to the server's state files.
+  DataDir = "/mix_net/auth"
+
+#
+# The Logging section controls the logging.
+#
+
+[Logging]
+
+  # Disable disables logging entirely.
+  Disable = false
+
+  # File specifies the log file, if omitted stdout will be used.
+  File = "/mix_net/log/authority.log"
+
+  # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
+  # `INFO` and `DEBUG`.
+  #
+  # Warning: The `DEBUG` log level is unsafe for production use.
+  Level = "Notice"
+
+[Debug]
+ Layers = 1
+ MinNodesPerLayer = 1
+#
+# The Parameters section holds the network parameters.
+#
+
+[Parameters]
+
+  # Send rate per minute rating limiting.
+  SendRatePerMinute = 1000
+
+  # Mu is the inverse of the mean of the exponential distribution that
+  # clients will use to sample delays.
+  Mu= 0.00025
+
+  # MuMaxDelay is the maximum per-hop delay in milliseconds.
+  # If omitted, the MaxDelay will be derived from the 0.99999 quantile of
+  # of the exponential distribution.
+  MuMaxDelay = 30000
+
+  #--------------------------------------------------
+  # CLIENT SEND SCHEDULING - MESSAGES
+  #--------------------------------------------------
+  # LambdaP is the inverse of the mean of the exponential distribution that
+  # clients will sample to determine the time interval between sending
+  # messages from it's FIFO egress queue or drop decoy messages if the queue is empty.
+  LambdaP = 0.0025 # mean of 0.4 sec
+
+  # LambdaPMaxDelay is the maximum send interval in milli/seconds.
+  LambdaPMaxDelay = 10000
+
+
+  #--------------------------------------------------
+  # CLIENT SEND SCHEDULING - DROP DECOY TRAFFIC
+  #--------------------------------------------------
+  # LambdaD is the inverse of the mean of the exponential distribution
+  # that is used to select the delay between clients sending from their egress
+  # FIFO queue or drop decoy message.
+  LambdaD = 0.000001 # mean of 1000s
+
+  #LambdaDMaxDelay sets the maximum delay for LambdaP.
+  LambdaDMaxDelay = 3000000  # 3000 s
+
+  #--------------------------------------------------
+  # CLIENT SEND SCHEDULING - LOOP DECOY TRAFFIC
+  #--------------------------------------------------
+  # LambdaL is the inverse of the mean of the exponential distribution
+  #	that clients will sample to determine the time interval between sending
+  #	decoy loop messages.
+  LambdaL = 0.000001  # mean of 1000s
+
+  # LambdaLMaxDelay sets the maximum delay for LambdaP.
+  LambdaLMaxDelay = 3000000  # 3000 s
+
+  #--------------------------------------------------
+  # MIX SEND SCHEDULING - LOOP DECOY TRAFFIC
+  #--------------------------------------------------
+  # LambdaM  is the inverse of the mean of the exponential distribution that mixes
+  # will sample to determine send timing of mix loop decoy traffic.
+  LambdaM= 0.001  # mean of 1 sec
+
+  # LambdaMMaxDelay is the maximum send interval in milliseconds.
+  LambdaMMaxDelay= 3000
+
+#
+# The Mixes array defines the list of white-listed non-provider nodes.
+#
+
+[[Mixes]] # Mix1
+  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+  # format.
+  IdentityKey = "tcsASvX7qj9n9i32nftWZwa+5OM/+cS7G6qZT80N9nc="
+
+
+[[Mixes]] # Mix2
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+  IdentityKey = "riZSpIh7Xr+n+AOmMm/tlWX4+C62O7ozKwNioltjtdA="
+#[[Mixes]] # Mix2
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+#  IdentityKey = "dezYM6FM1LzarrUibstoE3JHcOyFygXgfkX7FiBjBvo="
+#
+#[[Mixes]] # Mix3
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+#  IdentityKey = "FCgoc/s828Bs+EYohH1aEv8d3uNo//+fKlZHc713vdo="
+#
+#[[Mixes]] # Mix4
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+#  IdentityKey = "QojbAigqfZpIMZOpfFwS0BjhKbbmdEmBLl0U6GcjVDI="
+#
+#[[Mixes]] # Mix5
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+#  IdentityKey = "eVL9odwqGVQ9o3DRkRz5vK/VYhaaR45/kI3pYD/ny8U="
+#
+#[[Mixes]] # Mix6
+#  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
+#  # format.
+#  IdentityKey = "gjOvHWFm96GDqmJ47eg1OMOVmOi7keUvx+oSBos5mwE="
+
+
+ #The Providers array defines the list of white-listed Provider nodes.
+
+
+
+
+#
+# The Providers array defines the list of white-listed Provider nodes.
+#
+[[Providers]]
+  # Identifier is the human readable provider identifier, such as a FQDN.
+  Identifier = "serviceprovider"
+
+  # IdentityKey is the provider's EdDSA signing key, in either Base16 OR Base64
+  # format.
+  IdentityKey = "hWVCTQH1oqEE1LCV/+nm2CTzXcjAEhJvnNVQu7eJFvg="
+
+
+[[Providers]]
+  # Identifier is the human readable provider identifier, such as a FQDN.
+  Identifier = "provider"
+
+  # IdentityKey is the provider's EdDSA signing key, in either Base16 OR Base64
+  # format.
+  IdentityKey = "zIBS8lmLlKZ7nxiWp+eoH1SwYxAPeuK6dmarMu+aARQ="

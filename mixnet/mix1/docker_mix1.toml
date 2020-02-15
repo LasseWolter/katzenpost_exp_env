@@ -1,0 +1,69 @@
+# Katzenpost server configuration file.
+
+#
+# The Server section contains mandatory information common to all nodes.
+#
+
+[Server]
+
+  # Identifier is the human readable identifier for the node (eg: FQDN).
+  Identifier = "mix1"
+
+  # Addresses are the IP address/port combinations that the server will bind
+  # to for incoming connections.
+  Addresses = ["127.0.0.1:29001"]
+
+  # DataDir is the absolute path to the server's state files.
+  DataDir = "/mix_net/mix1"
+
+  # IsProvider specifies if the server is a provider (vs a mix).
+  IsProvider = false 
+
+#
+# The PKI section contains the directory authority configuration.
+#
+
+[PKI]
+
+  # Nonvoting is a simple non-voting PKI for test deployments.
+  [PKI.Nonvoting]
+
+    # Address is the IP address/port combination of the directory authority.
+    Address = "127.0.0.1:2323"
+
+    # PublicKey = "vLWsMpdPGr1/uZlmAcHc3eDkDs5ObaaCrFB/6gF5Dzo=":"'s public key in Base64 or Base16 format.
+    PublicKey = "vLWsMpdPGr1/uZlmAcHc3eDkDs5ObaaCrFB/6gF5Dzo="
+    # PublicKey = "vLWsMpdPGr1/uZlmAcHc3eDkDs5ObaaCrFB/6gF5Dzo=":"
+
+
+#
+# The Logging section controls the logging.
+#
+
+[Logging]
+
+  # Disable disables logging entirely.
+  Disable = false
+
+  # File specifies the log file, if omitted stdout will be used.
+  File = "/mix_net/log/mix1.log"
+
+  # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
+  # `INFO` and `DEBUG`.
+  #
+  # Warning: The `DEBUG` log level is unsafe for production use.
+  Level = "DEBUG"
+
+
+#
+# The Management section specifies the management interface configuration.
+#
+
+[Management]
+
+  # Enable enables the management interface.
+  Enable = true
+
+  # Path specifies the path to the management interface socket.  If left
+  # empty it will use `management_sock` under the DataDir.
+  # Path = ""

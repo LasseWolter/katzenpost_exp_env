@@ -12,7 +12,7 @@
   Addresses = [ "127.0.0.1:30002" ]
 
   # DataDir is the absolute path to the server's state files.
-  DataDir = "/home/lasse/Programming/mix_net/provider"
+  DataDir = "/home/lasse/go/src/github.com/katzenpost/mixnet/provider"
 
   # IsProvider specifies if the server is a provider (vs a mix).
   IsProvider = true
@@ -43,7 +43,7 @@
   Disable = false
 
   # File specifies the log file, if omitted stdout will be used.
-  File = "/home/lasse/Programming/mix_net/log/provider.log"
+  File = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/provider.log"
 
   # Level specifies the log level out of `ERROR`, `WARNING`, `NOTICE`,
   # `INFO` and `DEBUG`.
@@ -83,8 +83,8 @@
 #Command = "/home/lasse/Programming/go_projects/bin/spool_server"
 #MaxConcurrency = 1
 #[Provider.CBORPluginKaetzchen.Config]
-#  log_dir = "/home/lasse/Programming/mix_net/log/provider/service_logs"
-#  data_store = "/home/lasse/Programming/mix_net/provider/spool_plugin.db"
+#  log_dir = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/provider/service_logs"
+#  data_store = "/home/lasse/go/src/github.com/katzenpost/mixnet/provider/spool_plugin.db"
 #
 #
 #[[Provider.CBORPluginKaetzchen]]
@@ -94,7 +94,7 @@
 #  Command = "/home/lasse/Programming/go_projects/bin/panda"
 #  MaxConcurrency = 1
 #  [Provider.CBORPluginKaetzchen.Config]
-#    log_dir = "/home/lasse/Programming/mix_net/log/provider/service_logs"
+#    log_dir = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/provider/service_logs"
 #    dwell_time = "200h"
 #    fileStore = "/home/user1/mixnet/provider/panda.db"
   # Here's an example external Kaetzchen service plugin config
@@ -142,7 +142,7 @@
 
       # SpoolDB is the path to the user message spool.  If left empty, it will
       # use `spool.db` under the DataDir.
-      SpoolDB = "/home/lasse/Programming/mix_net/provider/provider_spool.db"
+      SpoolDB = "/home/lasse/go/src/github.com/katzenpost/mixnet/provider/provider_spool.db"
 
 #
 # The Management section specifies the management interface configuration.
