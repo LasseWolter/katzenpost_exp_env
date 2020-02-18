@@ -44,7 +44,6 @@ I hope this little introduction helped you to get started. There are a few [bash
 - `start.sh` - starts the different components of the mixnet locally 
 - `stops.sh` - stops all components of the mixnet
 - `update_auth_pub_key` - updates all entries of the authority public key to the passed key (you want to update this script in order to include configs of new components you add, e.g. `mix2.toml` of a new mix)
-- `update_Queue_log  
 
 ### Tips for development
 - to have a closer look at the databases created by the mixnet servers (providers/mixes/auth) I've found the [boltbrowser](https://github.com/br0xen/boltbrowser) a very useful tool
