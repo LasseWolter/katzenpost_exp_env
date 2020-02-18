@@ -6,12 +6,12 @@ Type = "none"
 [Logging]
 Disable = false
 Level = "DEBUG"
-File = "/mix_net/log/catshadow1.log"
+File = "/home/lasse/go/src/github.com/katzenpost/mixnet/log/catshadow1.log"
 
 # Address and public key of the Authority (PKI)
 [NonvotingAuthority]
 Address = "127.0.0.1:2323" 
-PublicKey = "MYFavSSFEHNyYSwYQmKKV/MRpxW5ZrOZHM9jZdHiNOo="
+PublicKey = "vLWsMpdPGr1/uZlmAcHc3eDkDs5ObaaCrFB/6gF5Dzo="
 
 # We don't need to add a public key for the provider since key distribution happens
 # entirely through the Authroity (PKI)

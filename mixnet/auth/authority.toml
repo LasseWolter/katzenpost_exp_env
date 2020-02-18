@@ -30,7 +30,7 @@
   Level = "Notice"
 
 [Debug]
- Layers = 1
+ Layers = 1 
  MinNodesPerLayer = 1
 #
 # The Parameters section holds the network parameters.
@@ -103,10 +103,10 @@
   # format.
   IdentityKey = "tcsASvX7qj9n9i32nftWZwa+5OM/+cS7G6qZT80N9nc="
 
-[[Mixes]] # Mix2
+#[[Mixes]] # Mix2
 #  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64
 #  # format.
-  IdentityKey = "riZSpIh7Xr+n+AOmMm/tlWX4+C62O7ozKwNioltjtdA="
+#  IdentityKey = "riZSpIh7Xr+n+AOmMm/tlWX4+C62O7ozKwNioltjtdA="
 #
 #[[Mixes]] # Mix3
 #  # IdentityKey is the node's EdDSA signing key, in either Base16 OR Base64

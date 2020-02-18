@@ -2,3 +2,4 @@
 *.pem
 mixnet/queue_outputs/
 log
+mixnet/cli*

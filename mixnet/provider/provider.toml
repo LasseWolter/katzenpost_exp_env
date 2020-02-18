@@ -142,7 +142,7 @@
 
       # SpoolDB is the path to the user message spool.  If left empty, it will
       # use `spool.db` under the DataDir.
-      SpoolDB = "/home/lasse/go/src/github.com/katzenpost/mixnet/provider/provider_spool.db"
+      #SpoolDB = "/home/lasse/go/src/github.com/katzenpost/mixnet/provider/provider_spool.db"
 
 #
 # The Management section specifies the management interface configuration.

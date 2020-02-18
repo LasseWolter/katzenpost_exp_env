@@ -1,7 +1,12 @@
 #!/bin/bash
 root="$GOPATH/src/github.com/katzenpost/"
 
+# Make sure no servers are running locally
+echo "Stopping possible server instances running locally before build"
+./stop.sh
+
 # Clean up the environment by deleting already existing dbs, statefiles, etc.
+echo "Cleaning log-files and dbs before build"
 source ./cleanEnv.sh
 echo "Installing go binaries..."
 go install ${root}daemons/server
